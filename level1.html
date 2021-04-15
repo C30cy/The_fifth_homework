@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let str = "I'm?���going�??�to�?�take�??�a?�trip�?�to��?daocheng�?�on��May Day."
+        // ...your codes...
+        // str = str.split("");
+        let result = str.match(/\?[A-Z]/ig);
+        result = result.join("").toUpperCase();
+        result =result.replace(/\?/g,"").split("");
+        for(let i=0;i<result.length;i++){
+            str = str.replace(/\?[A-Z]/i,result[i]);
+        }
+        str = str.replace(/\?|�/ig," ");
+        str = str.replace(/\s+/g," ");
+        console.log(str) // 'I'm going to take a trip to Daocheng on May Day.'
+    </script>
+</head>
+
+<body>
+    <button>123</button>
+
+</body>
+
+</html>
